@@ -19,9 +19,9 @@ const app = express();
 if (config.env !== 'test') {
   app.use(morgan.successHandler);
   app.use(morgan.errorHandler);
-  
-}
 
+}
+console.log('hello world');
 // set security HTTP headers
 app.use(helmet());
 
