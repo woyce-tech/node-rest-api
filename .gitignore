@@ -10,3 +10,49 @@ yarn-error.log
 
 # Code coverage
 coverage
+
+# Outputs
+bazel-*
+test-project-host-*
+dist/
+dist-schema/
+conf/config.js
+conf/db-migrate-config.json
+.gitlab-ci.yml
+appspec.yml
+dry-run.sql
+dry-run-up-stg.sql
+dry-run-down-stg.sql
+dry-run-up-prod.sql
+dry-run-down-prod.sql
+dry-run-up-uat.sql
+dry-run-down-uat.sql
+.eslintrc.json
+*.mongodb
+
+# IDEs
+.idea/
+jsconfig.json
+.vscode/
+
+# Typings file.
+typings/
+
+# Misc
+coverage/
+node_modules/
+tmp/
+npm-debug.log*
+yarn-error.log*
+.ng_pkg_build/
+package-lock.json
+temp.js
+
+# Mac OSX Finder files.
+**/.DS_Store
+.DS_Store
+.prettierrc.js
+
+# config file
+conf/config.js
+assets/sign_consent_temp
