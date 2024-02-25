@@ -1,7 +1,6 @@
 const express = require('express');
 const helmet = require('helmet');
 const xss = require('xss-clean');
-const mongoSanitize = require('express-mongo-sanitize');
 const compression = require('compression');
 const cors = require('cors');
 const passport = require('passport');
@@ -31,7 +30,6 @@ app.use(express.urlencoded({ extended: true }));
 
 // sanitize request data
 app.use(xss());
-app.use(mongoSanitize());
 
 // gzip compression
 app.use(compression());
@@ -51,6 +49,13 @@ if (config.env === 'production') {
 
 // v1 api routes
 app.use('/v1', routes);
+
+app.get('/api/health', (req, res) => {
+  return res.status(200).json({
+    status: 'success',
+    message: 'working Fine',
+  });
+});
 
 // send back a 404 error for any unknown api request
 app.use((req, res, next) => {
