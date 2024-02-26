@@ -1,8 +1,6 @@
 language: node_js
 node_js:
-  - '12'
-services:
-  - mongodb
+  - '18'
 cache: yarn
 branches:
   only:
@@ -10,7 +8,6 @@ branches:
 env:
   global:
     - PORT=3000
-    - MONGODB_URL=mongodb://localhost:27017/node-boilerplate
     - JWT_SECRET=thisisasamplesecret
     - JWT_ACCESS_EXPIRATION_MINUTES=30
     - JWT_REFRESH_EXPIRATION_DAYS=30
