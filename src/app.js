@@ -1,4 +1,6 @@
+/* eslint-disable no-console */
 const express = require('express');
+const path = require('path');
 const helmet = require('helmet');
 const xss = require('xss-clean');
 const compression = require('compression');
@@ -50,11 +52,15 @@ if (config.env === 'production') {
 // v1 api routes
 app.use('/v1', routes);
 
-app.get('/api/health', (req, res) => {
+app.get('/v1/health', (req, res) => {
   return res.status(200).json({
     status: 'success',
     message: 'working Fine',
   });
+});
+
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.join(__dirname, './assets/logo/', 'favicon.ico'));
 });
 
 // send back a 404 error for any unknown api request

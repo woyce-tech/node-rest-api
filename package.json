@@ -1,10 +1,8 @@
 {
-  "name": "create-nodejs-express-app",
-  "version": "1.7.0",
+  "name": "nodejs-express-app",
+  "version": "1.0.0",
   "description": "Create a Node.js app for building production-ready RESTful APIs using Express",
-  "bin": "bin/createNodejsApp.js",
   "main": "src/index.js",
-  "repository": "https://github.com/woyce-tech/node-rest-api.git",
   "author": "Shyamsinh",
   "license": "MIT",
   "engines": {
@@ -47,6 +45,7 @@
     "prettier"
   ],
   "dependencies": {
+    "amqplib": "^0.10.3",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
